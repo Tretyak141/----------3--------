@@ -1,0 +1,20 @@
+     1	#include <unistd.h>
+     2	#include <stdio.h>
+     3	#include <stdlib.h>
+     4	
+     5	int main(int argc, char **argv)
+     6	{
+     7	    if (argc!=2) 
+     8	    {
+     9	        fprintf(stderr,"Args\n");
+    10	        exit(1);
+    11	    }
+    12	    int N = atoi(argv[1]);
+    13	    for (int i=0;i<N;i++)
+    14	    {
+    15	        printf("%d: %d\n",i+1,getpid());
+    16	    }
+    17	    //exit(1);
+    18	    //exit(0);
+    19	    abort();
+    20	}
